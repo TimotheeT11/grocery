@@ -74,7 +74,7 @@ function getItemsByCategory(items, category) {
  * @returns {number} the total quantity of all items
  */
 function countItems(items) {
-  // TODO: use `reduce`
+  return items.reduce((prev, curr) => prev + curr.quantity, 0);
 }
 
 /**
@@ -93,7 +93,7 @@ logNames(inventory);
 console.log("Here are the names again in all uppercase:");
 console.log(getUppercaseNames(inventory));
 
-// console.log(`In total, we have ${countItems(inventory)} items in stock.`);
+console.log(`In total, we have ${countItems(inventory)} items in stock.`);
 
 // const totalCost = getTotalPrice(inventory);
 // console.log(
