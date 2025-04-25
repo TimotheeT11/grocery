@@ -44,7 +44,7 @@ function getUppercaseNames(items) {
  * @returns {Item} - the item in `items` with the given `id`
  */
 function getItemById(items, id) {
-  // TODO: use `find`
+  return items.find((item) => item.id === id);
 }
 
 /**
@@ -96,9 +96,9 @@ console.log(getUppercaseNames(inventory));
 //   `It would cost $${totalCost?.toFixed(2)} to purchase everything in stock.`
 // );
 
-// const itemId = prompt("Enter the ID of an item:", "1");
-// console.log(`The item with id #${itemId} is:`);
-// console.log(getItemById(inventory, +itemId));
+const itemId = prompt("Enter the ID of an item:", "1");
+console.log(`The item with id #${itemId} is:`);
+console.log(getItemById(inventory, +itemId));
 
 // const itemName = prompt("Enter the name of an item:", "apple");
 // console.log(
