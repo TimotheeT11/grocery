@@ -53,7 +53,11 @@ function getItemById(items, id) {
  * @returns {number} the price of the item named `name` if found
  */
 function getItemPriceByName(items, name) {
-  // TODO: use a loop!
+  for (let i = 0; i < items.length; i++) {
+    if (items[i].name === name) {
+      return items[i].price;
+    }
+  }
 }
 
 /**
@@ -100,10 +104,10 @@ const itemId = prompt("Enter the ID of an item:", "1");
 console.log(`The item with id #${itemId} is:`);
 console.log(getItemById(inventory, +itemId));
 
-// const itemName = prompt("Enter the name of an item:", "apple");
-// console.log(
-//   `The price of ${itemName} is ${getItemPriceByName(inventory, itemName)}.`
-// );
+const itemName = prompt("Enter the name of an item:", "apple");
+console.log(
+  `The price of ${itemName} is ${getItemPriceByName(inventory, itemName)}.`
+);
 
 // const category = prompt("Enter a category you would like to see:", "fruit");
 // console.log(`The items in the ${category} category are:`);
