@@ -82,7 +82,7 @@ function countItems(items) {
  * @returns {number} the cost of all given items
  */
 function getTotalPrice(items) {
-  // TODO: use `reduce`
+  return items.reduce((prev, curr) => prev + curr.price, 0);
 }
 
 // === READ BUT DO NOT CHANGE THE CODE BELOW ===
@@ -95,10 +95,10 @@ console.log(getUppercaseNames(inventory));
 
 console.log(`In total, we have ${countItems(inventory)} items in stock.`);
 
-// const totalCost = getTotalPrice(inventory);
-// console.log(
-//   `It would cost $${totalCost?.toFixed(2)} to purchase everything in stock.`
-// );
+const totalCost = getTotalPrice(inventory);
+console.log(
+  `It would cost $${totalCost?.toFixed(2)} to purchase everything in stock.`
+);
 
 const itemId = prompt("Enter the ID of an item:", "1");
 console.log(`The item with id #${itemId} is:`);
