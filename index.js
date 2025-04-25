@@ -34,7 +34,8 @@ function logNames(items) {
  * @returns {string[]} an array of item names in all uppercase
  */
 function getUppercaseNames(items) {
-  // TODO: use `map`
+  const itemsUpperCaseNames = items.map((item) => item.name.toUpperCase());
+  return itemsUpperCaseNames;
 }
 
 /**
@@ -85,8 +86,8 @@ function getTotalPrice(items) {
 console.log("Welcome! We carry the following items:");
 logNames(inventory);
 
-// console.log("Here are the names again in all uppercase:");
-// console.log(getUppercaseNames(inventory));
+console.log("Here are the names again in all uppercase:");
+console.log(getUppercaseNames(inventory));
 
 // console.log(`In total, we have ${countItems(inventory)} items in stock.`);
 
