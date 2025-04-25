@@ -66,7 +66,7 @@ function getItemPriceByName(items, name) {
  * @returns {Item[]} array of items that belong to the given `category`
  */
 function getItemsByCategory(items, category) {
-  // TODO: use `filter`
+  return items.filter((item) => item.category === category);
 }
 
 /**
@@ -109,6 +109,6 @@ console.log(
   `The price of ${itemName} is ${getItemPriceByName(inventory, itemName)}.`
 );
 
-// const category = prompt("Enter a category you would like to see:", "fruit");
-// console.log(`The items in the ${category} category are:`);
-// console.log(getItemsByCategory(inventory, category));
+const category = prompt("Enter a category you would like to see:", "fruit");
+console.log(`The items in the ${category} category are:`);
+console.log(getItemsByCategory(inventory, category));
